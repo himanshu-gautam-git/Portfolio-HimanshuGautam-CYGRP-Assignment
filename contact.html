@@ -22,12 +22,31 @@
         input:focus,
         textarea:focus {
             outline: none;
-            border-color: green;
+            border-color: #28a745;
             border-radius: 20px;
         }
 
         label {
-            color: green;
+            color: #28a745;
+        }
+
+        hr {
+            background-color: #28a745;
+            width: 80%;
+            height: 1px;
+            margin-top: 50px;
+        }
+
+        th {
+            background-color: #28a745;
+            color: #ffffff;
+            border-right: 1px solid #ffffff;
+            text-align: center;
+        }
+        table
+        {
+           width:100%;
+           height: 100%;
         }
     </style>
 </head>
@@ -48,8 +67,8 @@
                 <a href="index.html#edu" class="nav-item nav-link">Education and Projects</a>
                 <a href="contact.html" class="nav-item nav-link active">Contact</a>
             </div>
-            <a href="contact.html" class="btn btn-menu d-none d-lg-block"
-                style="background-color:#457efa; color: #ffffff;">Hire Me</a>
+            <a href="contact.html" class="btn btn-menu btn-success d-none d-lg-block" style="color: #ffffff;">Hire
+                Me</a>
         </div>
     </nav>
     <div class="container-fluid" style="padding-top: 10%;">
@@ -59,7 +78,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-8">
-                    <form onsubmit="myFunction()">
+                    <form onsubmit="return false">
                         <div class="form-row" style="padding-top: 5%;">
                             <div class="form-col col-6">
                                 <label for="Name">Name</label>
@@ -68,26 +87,26 @@
                             </div>
                             <div class="form-col col-6" style="padding-left:5%">
                                 <label for="Surname">Surname</label>
-                                <input type="text" name="name" placeholder="Your Surname"
+                                <input id="lname" type="text" name="name" placeholder="Your Surname"
                                     style="border-style:solid; border-radius: 20px;padding: 8px;width:100%" required>
                             </div>
                         </div>
                         <div class="form-row" style="padding-top: 5%;">
                             <div class="form-col col-6">
                                 <label for="Date of Birth">Date of Birth</label>
-                                <input type="date" name="dob"
+                                <input id="dob" type="date" name="dob"
                                     style="border-style:solid; border-radius: 20px;padding: 8px;width:100%" required>
                             </div>
                             <div class="form-col col-6" style="padding-left:5%">
                                 <label for="Contact">Contact</label><br />
-                                <input type="tel" placeholder="Your Contact" name="contact"
-                                    style="border-style:solid; border-radius: 20px;padding: 8px;width:100%" required>
+                                <input id="tel" type="tel" placeholder="Your Contact" name="contact"
+                                    style="border-style:solid; border-radius: 20px;padding: 8px;width:100%" pattern="[0-9]{10}" required>
                             </div>
                         </div>
                         <div class="form-row" style="padding-top: 5%;">
                             <div class="form-col col-12">
                                 <label for="Email">Email</label>
-                                <input type="email" name="email" placeholder="Your Email"
+                                <input id="email" type="email" name="email" placeholder="Your Email"
                                     style="border-style:solid; border-radius: 20px;padding: 8px;width:100%" required>
                             </div>
                         </div>
@@ -100,44 +119,44 @@
                             </div>
                             <div class="form-col col-6">
                                 <label for="Attachement">Attach file</label>
-                                <input type="file" name="Attachment">
+                                <input type="file" name="Attachment" required>
                             </div>
                         </div>
                         <div class="form-row" style="padding-top: 5%;">
                             <div class="form-col col-12">
                                 <label for="Interests">Interests</label> <br />
                                 <input type="checkbox" name="Interests" value="HTML"> &nbsp HTML &nbsp
-                                <input type="checkbox" name="Interests" value="HTML"> CSS &nbsp
-                                <input type="checkbox" name="Interests" value="HTML"> JAVASCRIPT &nbsp
-                                <input type="checkbox" name="Interests" value="HTML"> BOOTSTRAP &nbsp
-                                <input type="checkbox" name="Interests" value="HTML"> REACT &nbsp
-                                <input type="checkbox" name="Interests" value="HTML"> NODE &nbsp
-                                <input type="checkbox" name="Interests" value="HTML"> .NET &nbsp
-                                <input type="checkbox" name="Interests" value="HTML"> SALESFORCE &nbsp
+                                <input type="checkbox" name="Interests" value="CSS"> CSS &nbsp
+                                <input type="checkbox" name="Interests" value="JAVASCRIPT"> JAVASCRIPT &nbsp
+                                <input type="checkbox" name="Interests" value="BOOTSTRAP"> BOOTSTRAP &nbsp
+                                <input type="checkbox" name="Interests" value="REACT"> REACT &nbsp
+                                <input type="checkbox" name="Interests" value="NODE"> NODE &nbsp
+                                <input type="checkbox" name="Interests" value=".NET"> .NET &nbsp
+                                <input type="checkbox" name="Interests" value="SALESFORCE"> SALESFORCE &nbsp
                             </div>
                         </div>
                         <div class="form-row" style="padding-top: 5%;">
                             <div class="form-col col-6">
                                 <label for="Rate">Rate</label></br>
-                                <input type="range" name="Rate" style="background-color:green;width:70%" min="1"
+                                <input type="range" name="Rate" style="background-color:#28a745;width:70%" min="1"
                                     max="5">
                             </div>
                             <div class="form-col col-auto">
                                 <label for="Color">Favourite Color</label></br>
-                                <input type="color" style="width:200%">
+                                <input id="color" type="color" style="width:200%" required>
                             </div>
                         </div>
                         <div class="form-row" style="padding-top: 5%;">
                             <div class="form-col col-12">
                                 <label for="Address">Address</label>
-                                <input type="textarea" name="address" placeholder="Your Address"
+                                <input id="add" type="textarea" name="address" placeholder="Your Address"
                                     style="border-style:solid; border-radius: 20px;padding: 8px;width:100%" required>
                             </div>
                         </div>
                         <div class="form-row" style="padding-top: 5%;">
                             <div class="form-col col-12">
                                 <label for="Comments">Comments</label>
-                                <textarea name="address" placeholder="Add queries or reviews"
+                                <textarea id="comm" name="address" placeholder="Add queries or reviews"
                                     style="border-width:2px; border-style:solid; border-radius: 20px;padding: 8px;width:100%"
                                     rows="6" cols="50" required></textarea>
                             </div>
@@ -145,7 +164,7 @@
                         <div class="form-row" style="padding-top: 5%;">
                             <div class="form-col col-12 align-items-center" style="text-align: center;">
                                 <button type="submit" class="btn btn-success"
-                                    style="border-radius:20px;width:150px;">Submit</button>
+                                    style="border-radius:20px;width:150px;" onclick="myFunction()">Submit</button>
                                 <input type="reset" class="btn btn-success" style="border-radius:20px;width:150px;">
                             </div>
                         </div>
@@ -154,40 +173,84 @@
             </div>
         </div>
     </div>
-    <footer style="padding-top: 5%;">
-        <div class="container-fluid bg-success text-white">
-            <div class="container text-center py-5">
-                <div class="d-flex justify-content-center mb-4">
-                    <a class="btn btn-light btn-social mr-2" href="https://twitter.com/royalhimanshu20"
-                        target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/himanshu.gautam.1232/"
-                        target=_blank><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-light btn-social mr-2"
-                        href="https://www.linkedin.com/in/himanshu-gautam-7b001b179/" target="_blank"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-light btn-social" href="https://www.instagram.com/i_himanshu_gautam/"
-                        target="_blank"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <a class="text-white" href="#">Privacy</a>
-                    <span class="px-3">|</span>
-                    <a class="text-white" href="#">Terms</a>
-                    <span class="px-3">|</span>
-                    <a class="text-white" href="#">FAQs</a>
-                    <span class="px-3">|</span>
-                    <a class="text-white" href="#">Help</a>
+    <hr />
+    <div class="container-fluid" style="padding-top:2%;">
+        <div class="container">
+            <div class="align-items-center justify-content-center">
+                <h1 class="text-success text-center">Responses</h1>
+            </div>
+            <div class="align-items-center justify-content-center" style="padding-top: 5%;">
+                <table id="mytable">
+                    <tr>
+                        <th>Sr no.</th>
+                        <th>Full name</th>
+                        <th>D.O.B</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Color</th>
+                        <th>Comments</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <footer style="padding-top: 5%;">
+            <div class="container-fluid bg-success text-white">
+                <div class="container text-center py-5">
+                    <div class="d-flex justify-content-center mb-4">
+                        <a class="btn btn-light btn-social mr-2" href="https://twitter.com/royalhimanshu20"
+                            target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/himanshu.gautam.1232/"
+                            target=_blank><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-light btn-social mr-2"
+                            href="https://www.linkedin.com/in/himanshu-gautam-7b001b179/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-light btn-social" href="https://www.instagram.com/i_himanshu_gautam/"
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="d-flex justify-content-center mb-3">
+                        <a class="text-white" href="#">Privacy</a>
+                        <span class="px-3">|</span>
+                        <a class="text-white" href="#">Terms</a>
+                        <span class="px-3">|</span>
+                        <a class="text-white" href="#">FAQs</a>
+                        <span class="px-3">|</span>
+                        <a class="text-white" href="#">Help</a>
                     </div>
                     <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Himanshu Gautam</a>. All
                         Rights Reserved. Designed by <a class="text-white font-weight-bold" href="#">Himanshu Gautam</a>
                     </p>
                 </div>
             </div>
-        </div>
+    </div>
     </footer>
     <script>
+        var n=1;
         function myFunction() {
-            var a = document.getElementById("iname").value;
-            alert("Heyy! " + a + ", your response have been recorded.We will contact you shortly.");
+            var table=document.getElementById("mytable");
+            var row1=table.insertRow();
+            var name = document.getElementById("iname").value;
+            var sname=document.getElementById("lname").value;
+            var dob=document.getElementById("dob").value;
+            var tel=document.getElementById("tel").value;
+            var email=document.getElementById("email").value;
+            var color=document.getElementById("color").value;
+            var comm=document.getElementById("comm").value;
+            var cell0=row1.insertCell();
+            var cell1=row1.insertCell();
+            var cell2=row1.insertCell();
+            var cell3=row1.insertCell();
+            var cell4=row1.insertCell();
+            var cell5=row1.insertCell();
+            var cell6=row1.insertCell();
+            cell0.innerHTML=n;
+            cell1.innerHTML=name;
+            cell2.innerHTML=dob;
+            cell3.innerHTML=tel;
+            cell4.innerHTML=email;
+            cell5.innerHTML=color;
+            cell6.innerHTML=comm;
+            n++;
+            alert("Heyy! " + name + ", your response have been recorded.We will contact you shortly.");
         }
     </script>
 </body>
