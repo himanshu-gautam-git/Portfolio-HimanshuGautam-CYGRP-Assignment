@@ -43,10 +43,10 @@
             border-right: 1px solid #ffffff;
             text-align: center;
         }
-        table
-        {
-           width:100%;
-           height: 100%;
+
+        table {
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -100,7 +100,8 @@
                             <div class="form-col col-6" style="padding-left:5%">
                                 <label for="Contact">Contact</label><br />
                                 <input id="tel" type="tel" placeholder="Your Contact" name="contact"
-                                    style="border-style:solid; border-radius: 20px;padding: 8px;width:100%" pattern="[0-9]{10}" required>
+                                    style="border-style:solid; border-radius: 20px;padding: 8px;width:100%"
+                                    pattern="[0-9]{10}" required>
                             </div>
                         </div>
                         <div class="form-row" style="padding-top: 5%;">
@@ -163,8 +164,8 @@
                         </div>
                         <div class="form-row" style="padding-top: 5%;">
                             <div class="form-col col-12 align-items-center" style="text-align: center;">
-                                <button type="submit" class="btn btn-success"
-                                    style="border-radius:20px;width:150px;" onclick="myFunction()">Submit</button>
+                                <button type="submit" class="btn btn-success" style="border-radius:20px;width:150px;"
+                                    onclick="myFunction()">Submit</button>
                                 <input type="reset" class="btn btn-success" style="border-radius:20px;width:150px;">
                             </div>
                         </div>
@@ -224,31 +225,31 @@
     </div>
     </footer>
     <script>
-        var n=1;
+        var n = 1;
         function myFunction() {
-            var table=document.getElementById("mytable");
-            var row1=table.insertRow();
+            var table = document.getElementById("mytable");
+            var row1 = table.insertRow();
             var name = document.getElementById("iname").value;
-            var sname=document.getElementById("lname").value;
-            var dob=document.getElementById("dob").value;
-            var tel=document.getElementById("tel").value;
-            var email=document.getElementById("email").value;
-            var color=document.getElementById("color").value;
-            var comm=document.getElementById("comm").value;
-            var cell0=row1.insertCell();
-            var cell1=row1.insertCell();
-            var cell2=row1.insertCell();
-            var cell3=row1.insertCell();
-            var cell4=row1.insertCell();
-            var cell5=row1.insertCell();
-            var cell6=row1.insertCell();
-            cell0.innerHTML=n;
-            cell1.innerHTML=name;
-            cell2.innerHTML=dob;
-            cell3.innerHTML=tel;
-            cell4.innerHTML=email;
-            cell5.innerHTML=color;
-            cell6.innerHTML=comm;
+            var sname = document.getElementById("lname").value;
+            var dob = document.getElementById("dob").value;
+            var tel = document.getElementById("tel").value;
+            var email = document.getElementById("email").value;
+            var color = document.getElementById("color").value;
+            var comm = document.getElementById("comm").value;
+            var cell0 = row1.insertCell();
+            var cell1 = row1.insertCell();
+            var cell2 = row1.insertCell();
+            var cell3 = row1.insertCell();
+            var cell4 = row1.insertCell();
+            var cell5 = row1.insertCell();
+            var cell6 = row1.insertCell();
+            cell0.innerHTML = n;
+            cell1.innerHTML = name;
+            cell2.innerHTML = dob;
+            cell3.innerHTML = tel;
+            cell4.innerHTML = email;
+            cell5.innerHTML = color;
+            cell6.innerHTML = comm;
             n++;
             alert("Heyy! " + name + ", your response have been recorded.We will contact you shortly.");
         }
