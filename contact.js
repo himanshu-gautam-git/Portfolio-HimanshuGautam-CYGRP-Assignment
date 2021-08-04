@@ -1,3 +1,14 @@
+//Typewriter effect
+var i = 0;
+var fname = 'Himanshu Gautam';
+window.onload=function nameAnimated() {
+  if (i < fname.length) {
+    document.getElementById("myname").innerHTML +=fname.charAt(i);
+    i++;
+    setTimeout(nameAnimated,50);
+  }
+}
+
 //Function to implement form validation and DOM manipulation which is connected with submit button of form in contact.html
 var n = 1;
 
