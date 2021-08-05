@@ -5,7 +5,7 @@ window.onload=function nameAnimated() {
   if (i < fname.length) {
     document.getElementById("myname").innerHTML +=fname.charAt(i);
     i++;
-    setTimeout(nameAnimated,50);
+    setTimeout(nameAnimated,150);
   }
 }
 
