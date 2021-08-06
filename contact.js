@@ -12,6 +12,14 @@ window.onload = function nameAnimated() {
 //Function to implement form validation and DOM manipulation which is connected with submit button of form in contact.html
 var n = 1;
 
+function isNumber(number)
+{
+  if(isNaN(number))
+    return false;
+  else
+    true;
+    return true;
+}
 function myFunction() {
   var table = document.getElementById("mytable");
   var row1 = table.insertRow();
