@@ -11,7 +11,7 @@ window.onload = function nameAnimated() {
 
 //Function to implement form validation and DOM manipulation which is connected with submit button of form in contact.html
 var n = 1;
-
+//function to check number
 function isNumber(number)
 {
   if(isNaN(number))
