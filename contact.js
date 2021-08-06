@@ -11,7 +11,6 @@ window.onload = function nameAnimated() {
 
 //Function to implement form validation and DOM manipulation which is connected with submit button of form in contact.html
 var n = 1;
-<<<<<<< HEAD
 //function to check number
 function isNumber(number)
 {
@@ -21,9 +20,6 @@ function isNumber(number)
     true;
     return true;
 }
-=======
-
->>>>>>> parent of 7e2ec6b (Little bug in Javascript(DOM Manipulation) is fixed.)
 function myFunction() {
   var table = document.getElementById("mytable");
   var row1 = table.insertRow();
